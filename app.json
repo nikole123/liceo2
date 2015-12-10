@@ -1,0 +1,14 @@
+{
+  "name": "liceo2",
+  "description": "esñp",
+  "scripts": {
+    "postdeploy": "vc",
+    "pr-predestroy": "ddd"
+  },
+  "env": {
+    "ddd": "sss"
+  },
+  "addons": [
+
+  ]
+}
