@@ -56,8 +56,9 @@
 					    <li><a  href="{% url 'vista_bibliotecarios'%}"> Bibliotecario </a></li>
           				<li><a  href="{% url 'vista_prestamos'%}"> Préstamos </a></li>
           			    <li><a  href="{% url 'vista_reservas'%}"> Reservas </a></li>
-          			    <li><a  href="{% url 'vista_consultar_usuario_id' %}">Consultar usuario</a></li>
-          			    <li><a  href="{% url 'vista_reporte_usuarios_mes' %}"> Reporte usuarios</a></li>
+          			    <li><a  href="{% url 'vista_consultar_usuario_id' %}">Consultar</a></li>
+          			    <li><a  href="{% url 'vista_reporte_usuarios_mes' %}"> Reporte</a></li>
+          			    <li><a href="{% url 'vista_mis_reservas'%}">Mis reservas</a></li>
 					{% endif %}
 					{% if user.is_authenticated and user.usuario.tipo_usuario.nombre != "bibliotecario" %}
 						<li><a href="{% url 'vista_mis_reservas'%}">Mis reservas</a></li>
