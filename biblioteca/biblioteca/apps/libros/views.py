@@ -93,8 +93,6 @@ def cancelar_prestamo_view (request, id_prestar):
 		reservado = Prestamo.objects.get(id = id_prestar) 
 		reservado.estado_prestamo = "Cancelado"
 		
-
-		#reservado.libro.disponibilidad = True
 		li =  reservado.espacio
 		li.disponibilidad = True
 		li.save()
