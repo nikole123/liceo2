@@ -50,8 +50,14 @@
 			<div class="nav-collapse collapse">
 				<ul class = "nav">
 					{% if user.is_authenticated and user.is_staff and user.is_superuser %}
-						<li><a href="{% url 'vista_administrar'%}">Administrador</a></li>
-						<li><a href="{% url 'vista_mis_reservas'%}">Mis reservas</a></li>
+					    <li> <a  href="{% url 'vista_espacios'%}"> Espacios </a></li>
+					    <li> <a href="{% url 'vista_usuarios' %}">Usuarios</a></li>
+					    <li> <a href="{% url 'vista_tipos_usuarios' %}">Tipo de usuarios</a></li>
+					    <li><a  href="{% url 'vista_bibliotecarios'%}"> Bibliotecario </a></li>
+          				<li><a  href="{% url 'vista_prestamos'%}"> Préstamos </a></li>
+          			    <li><a  href="{% url 'vista_reservas'%}"> Reservas </a></li>
+          			    <li><a  href="{% url 'vista_consultar_usuario_id' %}">Consultar usuario</a></li>
+          			    <li><a  href="{% url 'vista_reporte_usuarios_mes' %}"> Reporte usuarios</a></li>
 					{% endif %}
 					{% if user.is_authenticated and user.usuario.tipo_usuario.nombre != "bibliotecario" %}
 						<li><a href="{% url 'vista_mis_reservas'%}">Mis reservas</a></li>
@@ -123,15 +129,6 @@
 				</div>
 				<div class="span3">
 					<div class="well sidebar-nav">
-						<div class="nav nav-list">
-							<center><li  class ="nav-header"><h4>Espacios </h4></li>
-	          			</div><!--/.well -->
-	          			<div class="well sidebar-nav">
-	            			<ul class="nav nav-list" id="libronuevo">
-	            			  <center><li class="nav-header"><h4>Nuevos espacios</h4> </li></center>
-	            			</ul>
-          				</div><!--/.well -->
-
 	          			<div class="well sidebar-nav">
 		            		<ul class="nav nav-list">
 		            		  <center><li class="nav-header"><h4>Redes sociales</h4></li></center>
@@ -151,7 +148,7 @@
 				<br>
 				      <hr>
       <footer class="well" align="center">
-        &copy; SENA CTPI 2015 ADSI <b>661169</b>
+        &copy; nikole alejandra cadena <b>liceo</b>
       </footer>
 			</div>
 		</div> 
